@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed')
+@import url('../fonts/Lucida Std Bold.otf')
+
+// Colors:
+$white: #fff; //white
+$gray: #757575; //gray
+$red: #ae0002; //red
+
+*
+    margin: 0px
+    padding: 0px
+    
+body
+    background: #bad1de url(../img/Black-Solid-1.jpg) no-repeat
+    background-size: contain
+    color: $gray
+    font-family: 'Barlow Condensed', sans-serif
+
+ul
+    list-style: none
+    display: flex
+    justify-content: center
+
+a
+    text-decoration: none
+    color: inherit
+
+.fullwrap
+    padding: 0 150px
+    padding-top: 33px
+    
+.wrapper
+    height: 100%
+    width: 1000px
+    margin: 0 auto
+    border-radius: 5px
+    position: relative
+    background-color: #ededed
+
+.hotest
+    border-radius: 5px
+    height: 42px
+    padding-left: 32px
+    display: flex
+    align-items: center
+    &-row
+        width: 70%
+        display: flex
+        align-items: center
+    & span
+        padding: 0 5px 2px
+        background-color: #85afbd
+        text-transform: uppercase
+        color: $white
+        border-radius: 3px
+        float: left
+    & p
+        font-family: 'Georgia'
+        font-style: italic
+        font-size: 11px
+        float: left
+        margin-left: 10px
+        & a
+            font-style: normal
+    & a
+        text-decoration: none
+
+.layman
+    height: 128px
+    display: flex
+    align-items: center
+    height: 128px
+    padding-left: 32px
+    background-size: cover
+    background-image: url('../img/Flag.jpg')
+    &-logo
+        text-transform: uppercase
+        color: $white
+        &_name
+            background-color: rgba(188,188,188,1)
+            background: linear-gradient(to top, rgba(188,188,188,1) 0%, rgba(255,255,255,1) 100%)
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+            font-family: 'Lucida Std'
+            font-weight: bold
+        &_politics
+            letter-spacing: 14px
+        &_hr
+            margin: 10px 0
+            color: #6892a0
+            width: 150px
+        &_blog
+            color: #6892a0
+            font-size: 11px
+            font-family: 'Lucida Sans Unicode'
+            letter-spacing: 2px
+    &-nav
+        margin-top: -35px
+        width: 100%
+        text-transform: uppercase
+        color: $white
+        &_list .first-ul
+            width: 260px
+            margin-left: 10px
+            margin-bottom: 15px
+            display: flex
+            justify-content: space-between
+            font-size: 13px
+.second-ul
+    width: 80%
+    display: flex
+    justify-content: space-between
+    & a
+        padding: 4px 10px 5px
+        &:active
+            background: #092f3b
+            box-shadow: 0 0 1px rgba(0,0,0,.5) inset, 0 1px 2px rgba(0,0,0,.5) inset, 0 1px 1px rgba(255,255,255,.1)
+
+.main
+    display: flex
+    justify-content: space-between
+    padding-bottom: 30px
+
+.news-line
+    height: 36px
+    display: flex
+    justify-content: flex-start
+    background-color: #cacaca
+    clear: both
+    text-transform: uppercase
+    &_arrow
+        background-color: $red
+        padding: 0 25px 0 15px
+        color: $white
+        font-size: 18px
+        display: flex
+        align-items: center
+    &_triangle
+        width: 0
+        height: 0
+        border-top: 18px solid transparent
+        border-left: 20px solid $red
+        border-bottom: 18px solid transparent
+    &_sometext
+        padding-left: 15px
+        display: flex
+        align-items: center
+        font-size: 12px
+        color: $gray
+.news
+    padding: 30px 16px 0 30px
+    &-img
+        margin-bottom: 14px
+        &_pic
+            height: 256px
+            width: 100%
+            background-image: url('../img/ruins.jpg')
+            background-size: cover
+        &_desc
+            position: absolute
+            height: 110px
+            width: 340px
+            border-radius: 3px
+            margin-top: -150px
+            margin-left: 30px
+            background-color: #1e1e1e
+            font-family: 'Georgia'
+            color: $white
+            & p
+                line-height: 150%
+                text-align: justify
+                padding: 20px
+                font-size: 12px
+    &-grid
+        display: flex
+        justify-content: space-between
+        padding-bottom: 44px
+    &-blog
+        clear: both
+        height: 130px
+        margin: 20px 0
+        display: flex
+        align-items: center
+        &_img
+            float: left
+            margin-right: 25px
+        &_desc
+            font-family: 'Georgia'
+            font-size: 12px
+
+.post
+    display: flex
+    justify-content: space-between
+    margin-top: 20px
+    &-comment
+        margin-right: 14px
+        & img
+            float: left
+            margin-top: 2px
+        & p
+            float: left
+            margin-left: 7px
+            font-size: 11px
+    &-tags
+        & p
+            float: left
+            margin-right: 10px
+        &_link
+            text-decoration: underline
+            font-style: italic
+            color: #2b5e5e
+    &-share
+        margin-right: 8%
+        & p
+            float: left
+            margin-right: 5px
+        & a
+            float: left
+            margin-left: 5px
+        
+.card
+    height: 280px
+    width: 170px
+    border-radius: 3px
+    box-shadow: 1px 1px 4px 0px rgba(173,171,173,1)
+    font-family: 'Georgia'
+    &-img
+        margin: 14px 0 14px 14px
+    & h5
+        margin: 0 14px 14px
+        color: #042b38
+        text-decoration: underline
+        font-size: 12px
+    &-descr
+        margin: 0 14px
+        font-style: italic
+        font-size: 11px
+    &-comment
+        float: right
+        margin-right: 14px
+        & img
+            float: left
+            margin-top: 2px
+        & p
+            float: left
+            margin-left: 7px
+            font-style: italic
+            font-size: 11px
+
+aside
+    margin-right: 40px
+
+.red_line
+    border-radius: 3px
+    width: 188px
+    margin: 30px 0 0 14px
+    height: 36px
+    background-color: $red
+    color: $white
+    text-transform: uppercase
+    font-size: 18px
+    display: flex
+    align-items: center
+    font-family: 'Barlow Condensed', sans-serif
+    & p
+        margin-left: 15px
+
+.aside
+    border-radius: none
+    box-shadow: none
+    width: 188px
+    min-height: 330px
+
+footer
+    margin: 0 auto
+    width: 1000px
+
+h2
+    margin: 200px 0 200px
+    font-family: 'Lucida Std'
+    text-transform: uppercase
+    background: linear-gradient(to top, #0f394a 0%, #266781 100%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
