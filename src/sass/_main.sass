@@ -2,19 +2,20 @@
 @import url('../fonts/Lucida Std Bold.otf')
 
 // Colors:
-$white: #fff; //white
-$gray: #757575; //gray
-$red: #ae0002; //red
+$white: #fff;
+$gray: #757575;
+$red: #ae0002;
 
-*
-    margin: 0px
-    padding: 0px
+// Fonts:
+$main-font: 'Barlow Condensed', sans-serif;
+$text-font: 'Georgia';
+$title-font: 'Lucida Std';
     
 body
     background: #bad1de url(../img/Black-Solid-1.jpg) no-repeat
     background-size: contain
     color: $gray
-    font-family: 'Barlow Condensed', sans-serif
+    font-family: $main-font
 
 ul
     list-style: none
@@ -43,7 +44,7 @@ a
     padding-left: 32px
     display: flex
     align-items: center
-    &-row
+    &__row
         width: 70%
         display: flex
         align-items: center
@@ -55,7 +56,7 @@ a
         border-radius: 3px
         float: left
     & p
-        font-family: 'Georgia'
+        font-family: $text-font
         font-style: italic
         font-size: 11px
         float: left
@@ -73,40 +74,40 @@ a
     padding-left: 32px
     background-size: cover
     background-image: url('../img/Flag.jpg')
-    &-logo
+    &__logo
         text-transform: uppercase
         color: $white
-        &_name
+        &--name
             background-color: rgba(188,188,188,1)
             background: linear-gradient(to top, rgba(188,188,188,1) 0%, rgba(255,255,255,1) 100%)
             -webkit-background-clip: text
             -webkit-text-fill-color: transparent
-            font-family: 'Lucida Std'
+            font-family: $title-font
             font-weight: bold
-        &_politics
+        &--politics
             letter-spacing: 14px
-        &_hr
+        &--hr
             margin: 10px 0
             color: #6892a0
             width: 150px
-        &_blog
+        &--blog
             color: #6892a0
             font-size: 11px
             font-family: 'Lucida Sans Unicode'
             letter-spacing: 2px
-    &-nav
+    &__nav
         margin-top: -35px
         width: 100%
         text-transform: uppercase
         color: $white
-        &_list .first-ul
+        &--list .first__ul
             width: 260px
             margin-left: 10px
             margin-bottom: 15px
             display: flex
             justify-content: space-between
             font-size: 13px
-.second-ul
+.second__ul
     width: 80%
     display: flex
     justify-content: space-between
@@ -121,27 +122,27 @@ a
     justify-content: space-between
     padding-bottom: 30px
 
-.news-line
+.news__line
     height: 36px
     display: flex
     justify-content: flex-start
     background-color: #cacaca
     clear: both
     text-transform: uppercase
-    &_arrow
+    &--arrow
         background-color: $red
         padding: 0 25px 0 15px
         color: $white
         font-size: 18px
         display: flex
         align-items: center
-    &_triangle
+    &--triangle
         width: 0
         height: 0
         border-top: 18px solid transparent
         border-left: 20px solid $red
         border-bottom: 18px solid transparent
-    &_sometext
+    &--sometext
         padding-left: 15px
         display: flex
         align-items: center
@@ -149,14 +150,14 @@ a
         color: $gray
 .news
     padding: 30px 16px 0 30px
-    &-img
+    &__img
         margin-bottom: 14px
-        &_pic
+        &--pic
             height: 256px
             width: 100%
             background-image: url('../img/ruins.jpg')
             background-size: cover
-        &_desc
+        &--desc
             position: absolute
             height: 110px
             width: 340px
@@ -164,35 +165,35 @@ a
             margin-top: -150px
             margin-left: 30px
             background-color: #1e1e1e
-            font-family: 'Georgia'
+            font-family: $text-font
             color: $white
             & p
                 line-height: 150%
                 text-align: justify
                 padding: 20px
                 font-size: 12px
-    &-grid
+    &__grid
         display: flex
         justify-content: space-between
         padding-bottom: 44px
-    &-blog
+    &__blog
         clear: both
         height: 130px
         margin: 20px 0
         display: flex
         align-items: center
-        &_img
+        &--img
             float: left
             margin-right: 25px
-        &_desc
-            font-family: 'Georgia'
+        &--desc
+            font-family: $text-font
             font-size: 12px
 
 .post
     display: flex
     justify-content: space-between
     margin-top: 20px
-    &-comment
+    &__comment
         margin-right: 14px
         & img
             float: left
@@ -201,15 +202,15 @@ a
             float: left
             margin-left: 7px
             font-size: 11px
-    &-tags
+    &__tags
         & p
             float: left
             margin-right: 10px
-        &_link
+        &--link
             text-decoration: underline
             font-style: italic
             color: #2b5e5e
-    &-share
+    &__share
         margin-right: 8%
         & p
             float: left
@@ -223,19 +224,19 @@ a
     width: 170px
     border-radius: 3px
     box-shadow: 1px 1px 4px 0px rgba(173,171,173,1)
-    font-family: 'Georgia'
-    &-img
+    font-family: $text-font
+    &__img
         margin: 14px 0 14px 14px
     & h5
         margin: 0 14px 14px
         color: #042b38
         text-decoration: underline
         font-size: 12px
-    &-descr
+    &__descr
         margin: 0 14px
         font-style: italic
         font-size: 11px
-    &-comment
+    &__comment
         float: right
         margin-right: 14px
         & img
@@ -250,7 +251,7 @@ a
 aside
     margin-right: 40px
 
-.red_line
+.red-line
     border-radius: 3px
     width: 188px
     margin: 30px 0 0 14px
@@ -261,7 +262,7 @@ aside
     font-size: 18px
     display: flex
     align-items: center
-    font-family: 'Barlow Condensed', sans-serif
+    font-family: $main-font
     & p
         margin-left: 15px
 
@@ -277,7 +278,7 @@ footer
 
 h2
     margin: 200px 0 200px
-    font-family: 'Lucida Std'
+    font-family: $title-font
     text-transform: uppercase
     background: linear-gradient(to top, #0f394a 0%, #266781 100%)
     -webkit-background-clip: text
