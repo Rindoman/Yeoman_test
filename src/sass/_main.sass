@@ -1,5 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed')
-@import url('../fonts/Lucida Std Bold.otf')
++font('Barlow Condensed', sans-serif)
++font('Lucida Std Bold', sans-serif)
+
+=barlow 
+    font-family: 'Barlow Condensed', sans-serif
+
+=lucida 
+    font-family: 'Lucida Std'
 
 // Colors:
 $white: #fff;
@@ -7,18 +13,15 @@ $gray: #757575;
 $red: #ae0002;
 
 // Fonts:
-$main-font: 'Barlow Condensed', sans-serif;
 $text-font: 'Georgia';
-$title-font: 'Lucida Std';
     
 body
     background: #bad1de url(../img/Black-Solid-1.jpg) no-repeat
     background-size: contain
     color: $gray
-    font-family: $main-font
+    +barlow
 
 ul
-    list-style: none
     display: flex
     justify-content: center
 
@@ -48,22 +51,22 @@ a
         width: 70%
         display: flex
         align-items: center
-    & span
+    span
         padding: 0 5px 2px
         background-color: #85afbd
         text-transform: uppercase
         color: $white
         border-radius: 3px
         float: left
-    & p
+    p
         font-family: $text-font
         font-style: italic
         font-size: 11px
         float: left
         margin-left: 10px
-        & a
+        a
             font-style: normal
-    & a
+    a
         text-decoration: none
 
 .layman
@@ -74,44 +77,48 @@ a
     padding-left: 32px
     background-size: cover
     background-image: url('../img/Flag.jpg')
-    &__logo
-        text-transform: uppercase
-        color: $white
-        &--name
-            background-color: rgba(188,188,188,1)
-            background: linear-gradient(to top, rgba(188,188,188,1) 0%, rgba(255,255,255,1) 100%)
-            -webkit-background-clip: text
-            -webkit-text-fill-color: transparent
-            font-family: $title-font
-            font-weight: bold
-        &--politics
-            letter-spacing: 14px
-        &--hr
-            margin: 10px 0
-            color: #6892a0
-            width: 150px
-        &--blog
-            color: #6892a0
-            font-size: 11px
-            font-family: 'Lucida Sans Unicode'
-            letter-spacing: 2px
     &__nav
         margin-top: -35px
         width: 100%
         text-transform: uppercase
         color: $white
-        &--list .first__ul
-            width: 260px
-            margin-left: 10px
-            margin-bottom: 15px
-            display: flex
-            justify-content: space-between
-            font-size: 13px
-.second__ul
+
+.nav-list 
+    &__main
+        width: 260px
+        margin-left: 10px
+        margin-bottom: 15px
+        display: flex
+        justify-content: space-between
+        font-size: 13px
+
+.logo
+        text-transform: uppercase
+        color: $white
+        &__name
+            background-color: rgba(188,188,188,1)
+            background: linear-gradient(to top, rgba(188,188,188,1) 0%, rgba(255,255,255,1) 100%)
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+            +lucida
+            font-weight: bold
+        &__politics
+            letter-spacing: 14px
+        &__hr
+            margin: 10px 0
+            color: #6892a0
+            width: 150px
+        &__blog
+            color: #6892a0
+            font-size: 11px
+            font-family: 'Lucida Sans Unicode'
+            letter-spacing: 2px
+
+.nav-secondary
     width: 80%
     display: flex
     justify-content: space-between
-    & a
+    a
         padding: 4px 10px 5px
         &:active
             background: #092f3b
@@ -148,6 +155,7 @@ a
         align-items: center
         font-size: 12px
         color: $gray
+
 .news
     padding: 30px 16px 0 30px
     &__img
@@ -167,7 +175,7 @@ a
             background-color: #1e1e1e
             font-family: $text-font
             color: $white
-            & p
+            p
                 line-height: 150%
                 text-align: justify
                 padding: 20px
@@ -195,15 +203,15 @@ a
     margin-top: 20px
     &__comment
         margin-right: 14px
-        & img
+        img
             float: left
             margin-top: 2px
-        & p
+        p
             float: left
             margin-left: 7px
             font-size: 11px
     &__tags
-        & p
+        p
             float: left
             margin-right: 10px
         &--link
@@ -212,10 +220,10 @@ a
             color: #2b5e5e
     &__share
         margin-right: 8%
-        & p
+        p
             float: left
             margin-right: 5px
-        & a
+        a
             float: left
             margin-left: 5px
         
@@ -227,7 +235,7 @@ a
     font-family: $text-font
     &__img
         margin: 14px 0 14px 14px
-    & h5
+    h5
         margin: 0 14px 14px
         color: #042b38
         text-decoration: underline
@@ -239,10 +247,10 @@ a
     &__comment
         float: right
         margin-right: 14px
-        & img
+        img
             float: left
             margin-top: 2px
-        & p
+        span
             float: left
             margin-left: 7px
             font-style: italic
@@ -262,8 +270,8 @@ aside
     font-size: 18px
     display: flex
     align-items: center
-    font-family: $main-font
-    & p
+    +barlow
+    p
         margin-left: 15px
 
 .aside
@@ -278,7 +286,7 @@ footer
 
 h2
     margin: 200px 0 200px
-    font-family: $title-font
+    +lucida
     text-transform: uppercase
     background: linear-gradient(to top, #0f394a 0%, #266781 100%)
     -webkit-background-clip: text
